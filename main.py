@@ -1,11 +1,21 @@
-# 1.1 Implementation a recursive function to calculate the factorial of a given number
-def factorial(n):
-  if n == 0:
-    return 1
-  else:
-    return n * factorial(n - 1)
+# Implement a class called Player that represent a circket Player.The player class should have a method called play() which prints "The player is playing cricket.Derive two classes.Batsman and bowler from the Player class.Overide the play() method in each derived class to print"The batsman is batting" and "The bowler is bowing",respectively.Write a program to create objects pf both the batsman and bowler classes and play() method for each object
 
+class Player:
+    def play(self):
+        print("The player is playing cricket")
 
-number = int(input("Enter a number: "))
-result = factorial(number)
-print("The factorial of", number, "is", result)
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting")
+
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling")
+
+# Create objects for the Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
+
+# Call the play() method for each object
+batsman.play()
+bowler.play()
